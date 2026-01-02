@@ -2,6 +2,7 @@
 //map<int,int> name_name ;   (key/Number , value/frequency)
 //unordered_map <> name
 //Array hashing is only safe when the value range is known and bounded. Otherwise, use map or unordered_map.
+//MAP STORES KEY/NUMBER IN INCREASING ORDER
 
 #include <iostream>
 #include <map>
@@ -26,7 +27,11 @@ int main(){
         hash[arr[i]]++;
     }
 
-    cout <<"The number 2 is repeated "<<hash[2]<<" times "<<endl;
-    cout <<"The number 53 is repeated "<<hash[53]<<endl;
+    cout <<"The number 2 is repeated "<<hash[1]<<" times "<<endl;
+    cout <<"The number 53 is repeated "<<hash[52]<<endl;
+
+    for(auto it:hash_map){
+        cout<<it.first<<" --> "<<it.second<<endl;
+    }
     return 0;
 }
