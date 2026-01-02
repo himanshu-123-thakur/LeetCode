@@ -4,17 +4,23 @@
 //Array hashing is only safe when the value range is known and bounded. Otherwise, use map or unordered_map.
 //MAP STORES KEY/NUMBER IN INCREASING ORDER
 
+//IN A MAP storing/fetching takes O(log N)
+//UNORDERED most of the cases : O(1) in almost all cases
+//                            : O(N) in WORST case, N is number of element in map
+
 #include <iostream>
 #include <map>
+#include <unordered_map>
 using namespace std;
 
 
 int main(){
     int arr[10]={2,23,2,2,3,3,4,2,5,53};
-    int hash[53]={0};
+    int hash[54]={0};
     string s;
     cin>>s;
-    map <int, int> hash_map{};
+    // map <int, int> hash_map{};
+    unordered_map<char,int> hash_map{};
     for(int i=0;i<s.size();i++){
         hash_map[s[i]]++;
     }
@@ -27,8 +33,8 @@ int main(){
         hash[arr[i]]++;
     }
 
-    cout <<"The number 2 is repeated "<<hash[1]<<" times "<<endl;
-    cout <<"The number 53 is repeated "<<hash[52]<<endl;
+    cout <<"The number 2 is repeated "<<hash[2]<<" times "<<endl;
+    cout <<"The number 53 is repeated "<<hash[53]<<endl;
 
     for(auto it:hash_map){
         cout<<it.first<<" --> "<<it.second<<endl;
