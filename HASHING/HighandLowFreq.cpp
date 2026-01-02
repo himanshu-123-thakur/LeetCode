@@ -14,6 +14,10 @@ void high_freq(vector<int>&v , int n){
             result = mpp[v[i]];
             ans = v[i];
         }
+        else if(mpp[v[i]]==result) {
+            if(v[i]<ans)
+            ans = v[i];
+        }
         else{
             continue;
         }
