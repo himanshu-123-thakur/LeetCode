@@ -17,7 +17,7 @@ int main(){
     for(int i=0;i<s.size();i++){
         hash_map[s[i]]++;
     }
-    cout<<"From the string "<<s<<" want to check how many times the folowing things gets repeated : ";
+    cout<<"From the stringgg "<<s<<" want to check how many times the folowing things gets repeated : ";
     char c;
     cin>>c;
     cout <<c<<" gets repeated "<<hash_map[c]<<endl;
