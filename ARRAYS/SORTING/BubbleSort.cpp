@@ -1,4 +1,7 @@
 //CODE - ADJACENT SWAPS
+//for(int j=0;j<=i-1;j++) --------------------- i-1 is i then last element has nothing to compare too and will throw runtime error
+//RUNTIME ERROR - accessing something thatt tis not present
+
 #include <iostream>
 #include <algorithm>
 using namespace std;
