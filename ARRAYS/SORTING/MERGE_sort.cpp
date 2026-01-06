@@ -1,5 +1,7 @@
 //CODE - Merge Sort
 //NOT O(n square)
+//O(n log n) ----> TIME
+//O(n) ----> SPACE
 //DIVIDE AND MERGE 
 
 #include <iostream>
