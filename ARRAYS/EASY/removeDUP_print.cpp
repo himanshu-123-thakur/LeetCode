@@ -1,6 +1,5 @@
 //code - remove duplicate and only print the elemtns in a sorted array
-#include <iostream>
-#include <maps>
+#include <bits/stdc++.h>
 using namespace std;
 int main (){
     int size;
