@@ -1,4 +1,8 @@
 //code - remove duplicate and only print the elemtns in a sorted array
+//set<int> st(nums.begin(), nums.end());
+
+
+
 #include <bits/stdc++.h>
 using namespace std;
 int main (){
@@ -15,5 +19,7 @@ int main (){
     for(auto &it:mp){
         cout<<it.first<<" ";
     }
+
+    
     return 0;
 }
