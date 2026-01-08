@@ -65,11 +65,11 @@ void leftrotatebyD_OPTIMAL(int arr[],int size,int D){
 }
 
 int main(){
-    int arr[10]={1,2,3,4,5,6,7,8,9,10};
+    int arr[7]={1,2,3,4,5,6,7};
     int leftRotateby ;
     cout<<"Left rotate by : ";
     cin >>leftRotateby;
   //leftrotatebyD_BRUTE_FORCE(arr,10,leftRotateby);
-    leftrotatebyD_OPTIMAL(arr,10,leftRotateby);
+    leftrotatebyD_OPTIMAL(arr,7,leftRotateby);
     return 0;
 }
