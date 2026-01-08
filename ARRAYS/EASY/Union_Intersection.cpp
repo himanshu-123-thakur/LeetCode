@@ -74,40 +74,63 @@ using namespace std;
 
 // }
 
-//BRUTE
+//BRUTE ---> O(n1*n2)
+//      ---> O(n2) //SPACE
 
-void inter_arr(int arr1[],int arr2[], int n1,int n2){
-    vector <int>v;
-    int arr[n2]={0};
+// void inter_arr(int arr1[],int arr2[], int n1,int n2){
+//     vector <int>v;
+//     int arr[n2]={0};
 
-    int i=0;
-    while(i<n1){
-        for(int j =0;j<n2;j++){
-            if(arr1[i]==arr2[j] && arr[j]==0){
-                v.push_back(arr1[i]);
-                arr[j]=1;
-                i++;
-                break;
-            }
-            if(arr1[i]<arr2[j]){
-                i++;
-                break;
-            }
+//     int i=0;
+//     while(i<n1){
+//         for(int j =0;j<n2;j++){
+//             if(arr1[i]==arr2[j] && arr[j]==0){
+//                 v.push_back(arr1[i]);
+//                 arr[j]=1;
+//                 i++;
+//                 break;
+//             }
+//             if(arr1[i]<arr2[j]){
+//                 i++;
+//                 break;
+//             }
+//         }
+//     }
+
+//     for(auto &it:v){
+//         cout<<it<<" ";
+//     }
+// }
+
+void inter_arr_optimal(int arr1[],int arr2[], int n1,int n2){
+    int i=0;int j=0;
+    vector<int>v;
+    while(i<n1 && j<n2){
+        if(arr1[i]==arr2[j]){
+            v.push_back(arr1[i]);
+            i++;
+            j++;
+        }
+        else if(arr1[i]<arr2[j]){
+            i++;
+        }
+        else{
+            j++;
         }
     }
 
-    for(auto &it:v){
+        for(auto &it:v){
         cout<<it<<" ";
     }
 }
-
-
 
 int main(){
     int arr1[10]={1,2,2,3,3,3,4,5,5,6};
     int arr2[6]={1,2,3,4,4,7};
 
     //union_arr(arr1,arr2,10,6);
-    inter_arr(arr1,arr2,10,6);
+    // inter_arr(arr1,arr2,10,6);
+
+    inter_arr_optimal(arr1,arr2,10,6);
     return 0;
 }
