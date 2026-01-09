@@ -39,12 +39,12 @@ using namespace std;
         
 
 //         int rem = sum -k;
-//         if(mp.find(rem)!=mp.end()){
+//         if(mp.find(rem)!=mp.end()){ ///MEANS IF THE remainder is PRESENT then do this
 //             int l = i-mp[rem];
 //             length = max(length,l);
 //         }
 //         //TO cover case of 0 //VERY IMPORTANT
-//         if(mp.find(sum)==mp.end())
+//         if(mp.find(sum)==mp.end())  ///MEANS IF THE sum is NOT PRESENT BEFORE then do this
 //         {
 //             mp[sum]=i;
 //         } 
