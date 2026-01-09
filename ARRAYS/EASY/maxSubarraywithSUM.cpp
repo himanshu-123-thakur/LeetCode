@@ -59,7 +59,10 @@ using namespace std;
 // }
 
 
-//OPTIMAL - 2 POINTER only for +ve
+//OPTIMAL - 2 POINTER , sliding window only for +ve and 0
+//TC ----> O(2n)
+//SC ----> O(1)
+
 void longestsubarraywithK(int arr[], int n, int k){
     // int i = 0;
     // long long sum = 0;
