@@ -88,3 +88,23 @@ int main(){
     cout<<"MAX SUM IS "<<KADANEsubarray(arr,size);
     return 0;
 }
+
+//PRINT POSITION
+// int possubarray(int arr[],inst size){
+//     int sum=0;
+//     int start=0;
+//     int ANSend=0;
+//     int ANSstart=0;
+//     int maxi = INT_MIN;
+//     for(int i =0;i<size;i++){
+//         sum+=arr[i];
+//         if (sum<0){
+//             sum=0;
+//             start=i;
+//         }
+//         else{
+//             maxi = max(maxi,sum);
+//            ANSstart = start, ANDend =i;
+//         }
+//     }
+// }
