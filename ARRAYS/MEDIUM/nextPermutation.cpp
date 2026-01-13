@@ -25,38 +25,32 @@ using namespace std;
 //ANSWER !!!!!!
 
 void optimal_NEXTpermutation(vector<int> &v) {
-    int n = (int)v.size();
-    int i = n - 2;
+    int size = v.size();
+    int i = size-2;
 
-    // 1) Find breakpoint
-    while (i >= 0 && v[i] >= v[i + 1]) {
+    while(i>=0 && v[i]>=v[i+1]){
         i--;
     }
 
-    // 2) If no breakpoint, it's the last permutation -> return smallest
-    if (i < 0) {
-        reverse(v.begin(), v.end());
-        return; //THIS IS ENOUGH IF ALR GREATEST
+    if(i<0){
+        reverse(v.begin(),v.end());
+        for(auto &it:v){
+            cout<<it<<" ";
+        }
+        return;
     }
 
-    // 3) Find rightmost element greater than v[i]
-
-    int j = n - 1; //our exmaple 2 is samallest therefore swap // CANNOT SWAP WOTH LAST doirectky  eg 1 3 5 4 2 ,, breakpint 3 if we swap w 2 it wont give next permuatation
-    //Therefore need to swap with greateer and next in eg with 4 
-    while (j > i && v[j] <= v[i]) {
+    int j = size -1;
+    while(v[j]<v[i]){
         j--;
     }
-
-    // 4) Swap
-    swap(v[i], v[j]);
-
-    // 5) Reverse suffix / BETTER THAN SORITNG AS ALREADY SORTED
-    reverse(v.begin() + i + 1, v.end());
-
+    swap(v[i],v[j]);
+    reverse(v.begin()+i+1,v.end());
 
     for(auto &it:v){
         cout<<it<<" ";
     }
+
 }
 
 
