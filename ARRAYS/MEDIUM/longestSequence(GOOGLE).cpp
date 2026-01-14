@@ -40,6 +40,26 @@ using namespace std;
 
 //OPTIMAL APPROACH //O(3N)
 void longestconsecutive(vector<int>v){
+    unordered_set<int>st;
+    for(auto &it:v){
+        st.insert(it);
+    }
+    int count=0;
+    int result = 0;
+    int smallest = INT_MIN;
+
+    for(auto &it:st){
+        if(st.find(it-1)==st.end()){
+            count =1;
+            smallest = it;
+            while(st.find(smallest+1)!=st.end()){
+                count ++;
+                smallest++;
+            }
+            result = max(count,result);
+        }
+    }
+    cout<<"Longest is "<<result;
 
 }
 
