@@ -6,6 +6,7 @@ using namespace std;
 
 //OPTIMAL --> USING HASH map (subarray given the sum)
 //SOLVE
+//DRY RUN IS DONE ON TAB 
 
 int subarraySum(vector<int>& nums, int k) {
     unordered_map<int,int> mp;
