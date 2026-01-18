@@ -28,7 +28,7 @@ using namespace std;
 
 
 //OPTIMAL --> 2 Pointers
-//Comparing  both arrya element then comapring woth the last elemtn pushed in the vector if not same push
+//Comparing  both array element then comapring woth the last elemtn pushed in the vector if not same push
 // o(n1+n2) 
 //BEAUTIFUL
 
