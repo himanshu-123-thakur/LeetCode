@@ -11,6 +11,12 @@
 //k = j+1 and l = size -1
 //k and l 2 pointers
 
+#include <iostream>
+#include <vector>
+#include <set>
+#include <algorithm>
+using namespace std;
+
 vector<vector<int>> fourSum(vector<int>& nums, int target) {
         
     int size = nums.size();
@@ -56,4 +62,22 @@ vector<vector<int>> fourSum(vector<int>& nums, int target) {
     vector<vector<int>> vv (st.begin(),st.end());
 
     return vv;
+}
+
+int main(){
+
+    vector<int>v{1,0,-1,0,-2,2};
+
+    int target=0;
+
+
+    auto it=fourSum(v,target);
+    for(auto tt: it){
+        for(auto ii:tt){
+            cout<<ii<<" ";
+        }
+        cout<<endl;
+    }
+
+    return 0;
 }
