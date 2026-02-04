@@ -1,4 +1,6 @@
 //code 
+//Number of times it is rotated is = index of smallest element 
+
 
 #include <bits/stdc++.h>
 using namespace std;
