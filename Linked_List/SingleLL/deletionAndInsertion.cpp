@@ -122,6 +122,33 @@ Node* addNodeEND(Node *head,int value){
 }
 
 
+Node* addNodePOS(Node *head,int value,int pos){
+
+    if(pos <= 0) return head;              // invalid
+
+    if(pos == 1){                          // insert at head
+        return new Node(value, head);
+    }
+
+
+    if(head == nullptr){
+        return nullptr;
+    }
+
+    Node *temp = head;
+    
+    for(int i=1;i<pos-1;i++){
+        if(temp->next == nullptr) break;
+        temp = temp->next;
+    }
+    Node *newNode = new Node(value,temp->next);
+    temp->next = newNode;
+
+    return head;
+
+}
+
+
 int main(){
     vector<int> arr ={42,413,41341,3413,4314,14,4,41,42,1};
 
@@ -199,6 +226,25 @@ int main(){
     while(temp_6){
         cout<<temp_6->data<<" ";
         temp_6=temp_6->next;
+    }
+
+
+
+
+
+    cout<<endl;
+    cout<<"Add at pos : ";
+    int pos =0 ;
+    cin>>pos;
+    int value_7;
+    cin>>value_7;
+    cout<<"After adding "<<value_7<<" at pos "<<pos<<" ---> ";
+    head = addNodePOS(head,value_7,pos);
+
+    Node *temp_7=head;
+    while(temp_7){
+        cout<<temp_7->data<<" ";
+        temp_7=temp_7->next;
     }
     
 
