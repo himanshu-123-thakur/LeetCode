@@ -71,6 +71,14 @@ Node* removeKth(Node* head, int k) {
 Node* removeVALUE(Node *head, int value){
     if (head == nullptr) return head;
 
+        // If head itself has the value
+        if (head->data == value) {
+            Node* del = head;
+            head = head->next;
+            delete del;
+            return head;
+        }
+
     // if (k == 1) {
     //     Node* temp = head;
     //     head = head->next;
@@ -91,6 +99,28 @@ Node* removeVALUE(Node *head, int value){
     }
     return head; 
 }
+
+
+Node* addNode(Node *head, int value){
+
+    Node *temp = new Node(value, head);
+    return temp;
+
+}
+
+
+Node* addNodeEND(Node *head,int value){
+    if(head == nullptr){
+        return new Node(value);
+    }
+    Node *temp = head;
+    while(temp->next!=nullptr){
+        temp = temp-> next;
+    }
+    temp->next=new Node(value);
+    return head;
+}
+
 
 int main(){
     vector<int> arr ={42,413,41341,3413,4314,14,4,41,42,1};
@@ -145,6 +175,32 @@ int main(){
         cout<<temp_4->data<<" ";
         temp_4=temp_4->next;
     }
+    cout<<endl;
+
+    cout<<"ADD : ";
+    int value_5;
+    cin>>value_5;
+    cout<<"After adding "<<value_5<<" --->  ";
+    head=addNode(head,value_5);
+    Node *temp_5=head;
+    while(temp_5){
+        cout<<temp_5->data<<" ";
+        temp_5=temp_5->next;
+    }
+
+    cout<<endl;
+    cout<<"Add at end : ";
+    int value_6;
+    cin>>value_6;
+    cout<<"After adding "<<value_6<<" ---> ";
+    head = addNodeEND(head,value_6);
+
+    Node *temp_6=head;
+    while(temp_6){
+        cout<<temp_6->data<<" ";
+        temp_6=temp_6->next;
+    }
+    
 
     return 0;
 
