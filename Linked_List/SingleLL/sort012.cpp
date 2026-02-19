@@ -72,7 +72,7 @@ Node* sort012(Node* head) {
     dummy1->next = two->next;                               // 2. connect 1s → 2s
     dummy0->next = (one->next) ? one->next : two->next;    // 3. connect 0s → 1s or 2s
 
-    return zero->next;
+    return (zero->next) ? zero->next : (one->next) ? one->next : two->next;
 }
 
 
