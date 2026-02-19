@@ -17,34 +17,60 @@ ListNode *getIntersectionNode(ListNode *headA, ListNode *headB){
     //once we find we return it
 
 
-    if (!headA || !headB) return NULL;
+    // if (!headA || !headB) return NULL;
 
-    // 1) Find lengths
-    int lenA = 0, lenB = 0;
-    ListNode *a = headA, *b = headB;
+    // // 1) Find lengths
+    // int lenA = 0, lenB = 0;
+    // ListNode *a = headA, *b = headB;
 
-    while (a) { lenA++; a = a->next; }
-    while (b) { lenB++; b = b->next; }
+    // while (a) { lenA++; a = a->next; }
+    // while (b) { lenB++; b = b->next; }
 
     
-    a = headA; 
-    b = headB;
-    int diff = abs(lenA - lenB);
+    // a = headA; 
+    // b = headB;
+    // int diff = abs(lenA - lenB);
 
-    if (lenA > lenB) {
-        while (diff--) a = a->next;
-    } else {
-        while (diff--) b = b->next;
-    }
+    // if (lenA > lenB) {
+    //     while (diff--) a = a->next;
+    // } else {
+    //     while (diff--) b = b->next;
+    // }
 
    
-    while (a && b) {
-        if (a == b) return a;
-        a = a->next;
-        b = b->next;
+    // while (a && b) {
+    //     if (a == b) return a;
+    //     a = a->next;
+    //     b = b->next;
+    // }
+
+    // return NULL;
+
+
+
+
+
+
+
+
+
+
+
+
+    //OPTIMAL 
+
+
+    if (!headA || !headB) return NULL;
+
+    ListNode* tempA = headA;
+    ListNode* tempB = headB;
+
+    while (tempA != tempB) {
+        tempA = (tempA == NULL) ? headB : tempA->next;
+        tempB = (tempB == NULL) ? headA : tempB->next;
     }
 
-    return NULL;
+    return tempA;   // either intersection node or NULL
 }
 
 int main() {
