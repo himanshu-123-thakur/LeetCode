@@ -86,23 +86,60 @@ Node* reverseLL (Node* head){
 
     //RECURSIVE SOLUTION
 
-    if(head==NULL || head->next == NULL){
+    // if(head==NULL || head->next == NULL){
+    //     return head;
+    // }
+
+    
+    
+    //  Node* newHead = reverseLL(head->next);
+    //  Node* front = head->next;
+    //  front->next = head;
+    //  head->next = NULL;
+    //  return newHead;
+
+
+    // if(head==NULL || head->next==NULL){
+    //     return head;
+    // }
+
+    // Node* temp = head;
+    // Node* front = head;
+    // Node* prev = NULL;
+
+    // while(temp){
+    //     front = temp->next;
+    //     temp->next = prev;
+    //     prev = temp;
+    //     temp = front;
+    // }
+
+    // return prev;
+
+
+    if(head == NULL || head->next == NULL){
         return head;
     }
 
+    Node* newHead = reverseLL(head->next);
+    Node* front = head->next;
+    front->next = head;
+    head->next = NULL;
     
-    
-     Node* newHead = reverseLL(head->next);
-     Node* front = head->next;
-     front->next = head;
-     head->next = NULL;
-     return newHead;
-
-    
-
+    return newHead;
 
 }
+    // if(head==NULL || head->next == NULL){
+    //     return head;
+    // }
 
+    
+    
+    //  Node* newHead = reverseLL(head->next);
+    //  Node* front = head->next;
+    //  front->next = head;
+    //  head->next = NULL;
+    //  return newHead;
 int main(){
     vector<int> arr{231,3,24,34245,34,5,346543,6,53,65,46,536,345,25,23,4134,134};
     Node *head = convertToLL(arr);
