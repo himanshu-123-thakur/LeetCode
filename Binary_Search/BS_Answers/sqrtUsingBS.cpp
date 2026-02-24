@@ -3,17 +3,17 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void sqrt(int n){
+void sqrt(int n,int a){
     //WILLL WRITE LATER 
     int low = 1;
     int high = n;
     int ans=0;
     while(low<=high){
         int mid = (low+high)/2;
-        if(mid*mid > n){
+        if(pow(mid,a) > n){
             high = mid-1;
         }
-        else if(mid*mid<n){
+        else if(pow(mid,a)<n){
             ans = low;
             low = mid+1;
         }
@@ -22,15 +22,19 @@ void sqrt(int n){
             break;
         }
     }
-    cout<<"sqrt is = "<<ans<<endl;
+    cout<<"nTH is = "<<ans<<endl;
     
 
 }
 int main (){
     int n;
+    int aa=0;
     cout<<"Enter the no : ";
     cin>>n;
+    cout<<"Nt root you want so write the value of n : ";
+    
+    cin>>aa;
     // cout<<"Sqrt of "<<n<<" is "<<sqrt(n)<<endl;
-    sqrt(n);
+    sqrt(n,aa);
     return 0;
 }
