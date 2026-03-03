@@ -61,6 +61,16 @@ STACK | Function  | Meaning            |
 | `size()`  | number of elements |
 
 
+//QUEUE uses peek();
+//STACK USES TOP();
+
+
+//queue never usees top()
+
+//front → 10 20 30 ← back
+//Access element → front() or peek()
+
+
     */
     return 0;
 }
