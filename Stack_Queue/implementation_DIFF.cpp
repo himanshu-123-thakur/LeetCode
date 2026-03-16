@@ -232,4 +232,7 @@ class stack_as_queue{
 int main(){
     stack <int> st;
     queue <int> qe;
+
+
+    return 0;
 }
