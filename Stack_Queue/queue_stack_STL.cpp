@@ -50,6 +50,7 @@ QUEUE    | Function  | Meaning            |
 | `back()`  | last element       |
 | `empty()` | check empty        |
 | `size()`  | number of elements |
+| `peek()`  | 
 
 
 STACK | Function  | Meaning            |
