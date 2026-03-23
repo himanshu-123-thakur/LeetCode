@@ -177,6 +177,46 @@ For each character:
 */
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+-----------------------------------------------------------------------
+
+ONE-LINE TRICKS:
+
+Infix → Postfix  → use stack + precedence  
+Infix → Prefix   → reverse → postfix → reverse  
+Postfix → Infix  → pop2 → (op1 op op2)  
+Prefix → Infix   → right→left → pop2  
+Postfix → Prefix → pop2 → op op1 op2  
+Prefix → Postfix → pop2 → op1 op2 op  
+
+=======================================================================
+*/
+
+
+
+
+
+
+
+
+
+
+
+
 #include <iostream>
 #include <stack>
 using namespace std;
