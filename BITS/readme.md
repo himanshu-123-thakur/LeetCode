@@ -52,3 +52,7 @@ if number of 1 -> ODD = 1
 
     cannot left shist the INT_MAX as it changes sign bit too
     it gives us overflow issue
+
+
+***************** OPRATION
+    any (NUMBER & NUMBER-1) XOR (NUMBER) ====> GIVES US A NUMBER IN WHICH THE RIGHMIST BIT IS SET OF ORGINAL NUMBER
